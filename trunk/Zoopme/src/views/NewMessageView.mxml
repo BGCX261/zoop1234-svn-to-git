@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		xmlns:s="library://ns.adobe.com/flex/spark" title="">
+	
+	<fx:Script>
+		<![CDATA[
+			protected function messageNav_clickHandler(event:MouseEvent):void
+			{
+				navigator.pushView(views.MessageHistoryView);
+			}
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<s:layout>
+		<s:VerticalLayout paddingBottom="10" paddingLeft="10" paddingRight="10" paddingTop="10"/>
+ 	</s:layout>
+	
+	<s:actionContent>		
+		<s:Button id="editBtn" label="Edit" styleName="smallButton"/>		
+	</s:actionContent>
+	
+	<s:navigationContent>
+		<s:Button id="messageNav" label="Messages" styleName="smallButton" click="messageNav_clickHandler(event)"/>	
+	</s:navigationContent>	
+	<s:VGroup>
+		
+	</s:VGroup>
+	<s:Spacer height="100%"/>
+	<s:HGroup width="100%">
+		<s:BorderContainer backgroundColor="#ffffff" cornerRadius="5" width="80%" height="35"
+						   borderColor="#e0eeee" borderWeight="2">
+			<s:TextInput id="sendMessageTxtInput" borderVisible="false" width="100%" height="100%" prompt="Type Message"
+						 contentBackgroundColor="#ffffff"/>
+		</s:BorderContainer>
+		
+		<s:Button id="sendMessageBtn" label="Send" styleName="sendButton" width="20%" height="35"/>
+	</s:HGroup>
+</s:View>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		xmlns:s="library://ns.adobe.com/flex/spark"
+		creationComplete="view1_creationCompleteHandler(event)" xmlns:mx="library://ns.adobe.com/flex/mx">
+	<fx:Declarations>
+		<mx:DateFormatter id="DateDisplay" 
+						  formatString="K:NN A"/>
+	</fx:Declarations>
+	<fx:Script>
+		<![CDATA[
+			import mx.binding.utils.ChangeWatcher;
+			import mx.events.FlexEvent;
+			
+			import spark.components.List;
+			
+			[Bindable]
+			private var today:Date = new Date(); 
+			
+			private function updateImage(e:Event):void{
+				
+			}
+			
+			protected function view1_creationCompleteHandler(event:FlexEvent):void
+			{
+				if(data!=null){
+					var f:File = File.applicationDirectory.resolvePath(data.img);
+					f = new File(f.nativePath);
+					imgSrc.source = f.url;
+				}				
+			}
+			
+			protected function hgroup1_clickHandler(event:MouseEvent):void
+			{
+				dispatchEvent(new Event("sendNewMessageEvent", true));
+			}
+			
+			protected function image1_clickHandler(event:MouseEvent):void
+			{
+				delete_btn.visible=true;
+				delete_btn.includeInLayout=true;
+			}
+			
+			protected function delete_btn_clickHandler(event:MouseEvent):void
+			{
+				var parentList:List = owner as List;
+				parentList.dataProvider.removeItemAt(parentList.dataProvider.getItemIndex(data));
+			}
+			
+		]]>
+	</fx:Script>
+	<s:HGroup paddingBottom="5" paddingLeft="5" paddingRight="5" paddingTop="5" width="100%">
+		<s:Image source="assets/images/delete_icon1.png" click="image1_clickHandler(event)"/>
+		<s:HGroup  width="100%"
+				   click="hgroup1_clickHandler(event)">
+			
+			<s:Image id="imgSrc"/>
+			<s:VGroup>
+				<s:Label text="{data.name}" styleName="messageTitle"/>
+				<s:Label text="{data.dept}" styleName="messageDept"/>
+			</s:VGroup>
+			<s:Spacer width="100%"/>
+		</s:HGroup>
+		<s:VGroup horizontalAlign="right">
+			<s:Image id="delete_btn" source="assets/images/delete_icon2.png" visible="false" includeInLayout="false"
+					 click="delete_btn_clickHandler(event)"/>
+		</s:VGroup>
+		
+	</s:HGroup>
+	
+	<s:Line width="100%">
+		<s:stroke>
+			<s:SolidColorStroke color="#E0e0e0"
+								weight="2"/>
+		</s:stroke>
+	</s:Line>
+	
+</s:View>

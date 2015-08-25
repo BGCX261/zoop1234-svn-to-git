@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users>
+	<user id="1">
+		<name>James Tang</name>
+		<img>dummydata/images/user1.png</img>
+		<dept>Cardiology</dept>
+		<title></title>
+		<phonenum></phonenum>
+		<pagernum></pagernum>
+		
+	</user>
+	
+	<user id="2">
+		<name>William Smith</name>
+		<img>dummydata/images/user1.png</img>
+		<dept>Endocrinology</dept>
+		<title></title>
+		<phonenum></phonenum>
+		<pagernum></pagernum>
+	</user>
+	
+	<user id="3">
+		<name>Andrea Andrews</name>
+		<img>dummydata/images/user1.png</img>
+		<dept>Gastroentirology</dept>
+		<title></title>
+		<phonenum></phonenum>
+		<pagernum></pagernum>
+	</user>
+	
+	<user id="4">
+		<name>Fransis Grant</name>
+		<img>dummydata/images/user1.png</img>
+		<dept>Genetics</dept>
+		<title></title>
+		<phonenum></phonenum>
+		<pagernum></pagernum>
+	</user>
+	
+	<user id="5">
+		<name>Samantha Green</name>
+		<img>dummydata/images/user1.png</img>
+		<dept>Hematology</dept>
+		<title></title>
+		<phonenum></phonenum>
+		<pagernum></pagernum>
+	</user>
+	
+	<user id="6">
+		<name>Anthony Greenberg</name>
+		<img>dummydata/images/user1.png</img>
+		<dept>Infectious Decease</dept>
+		<title></title>
+		<phonenum></phonenum>
+		<pagernum></pagernum>
+	</user>
+	
+	<user id="7">
+		<name>Thomos Henderson</name>
+		<img>dummydata/images/user1.png</img>
+		<dept>Etamology</dept>
+		<title></title>
+		<phonenum></phonenum>
+		<pagernum></pagernum>
+	</user>
+	
+	<user id="8">
+		<name>James Tang</name>
+		<img>dummydata/images/user1.png</img>
+		<dept>Cardiology</dept>
+		<title></title>
+		<phonenum></phonenum>
+		<pagernum></pagernum>
+	</user>
+	
+	<user id="9">
+		<name>William Smith</name>
+		<img>dummydata/images/user1.png</img>
+		<dept>Endocrinology</dept>
+		<title></title>
+		<phonenum></phonenum>
+		<pagernum></pagernum>
+	</user>
+	
+	<user id="10">
+		<name>Andrea Andrews</name>
+		<img>dummydata/images/user1.png</img>
+		<dept>Gastroentirology</dept>
+		<title></title>
+		<phonenum></phonenum>
+		<pagernum></pagernum>
+	</user>
+	
+	<user id="11">
+		<name>Fransis Grant</name>
+		<img>dummydata/images/user1.png</img>
+		<dept>Genetics</dept>
+		<title></title>
+		<phonenum></phonenum>
+		<pagernum></pagernum>
+	</user>
+	
+	<user id="12">
+		<name>James Tang</name>
+		<img>dummydata/images/user1.png</img>
+		<dept>Cardiology</dept>
+		<title></title>
+		<phonenum></phonenum>
+		<pagernum></pagernum>
+	</user>
+	
+	<user id="13">
+		<name>William Smith</name>
+		<img>dummydata/images/user1.png</img>
+		<dept>Endocrinology</dept>
+		<title></title>
+		<phonenum></phonenum>
+		<pagernum></pagernum>
+	</user>
+	
+	<user id="14">
+		<name>Andrea Andrews</name>
+		<img>dummydata/images/user1.png</img>
+		<dept>Gastroentirology</dept>
+		<title></title>
+		<phonenum></phonenum>
+		<pagernum></pagernum>
+	</user>
+	
+	<user id="15">
+		<name>Fransis Grant</name>
+		<img>dummydata/images/user1.png</img>
+		<dept>Genetics</dept>
+		<title></title>
+		<phonenum></phonenum>
+		<pagernum></pagernum>
+	</user>
+	
+	<user id="16">
+		<name>Samantha Green</name>
+		<img>dummydata/images/user1.png</img>
+		<dept>Hematology</dept>
+		<title></title>
+		<phonenum></phonenum>
+		<pagernum></pagernum>
+	</user>
+	
+	<user id="17">
+		<name>Anthony Greenberg</name>
+		<img>dummydata/images/user1.png</img>
+		<dept>Infectious Decease</dept>
+		<title></title>
+		<phonenum></phonenum>
+		<pagernum></pagernum>
+	</user>
+	
+	<user id="18">
+		<name>Thomos Henderson</name>
+		<img>dummydata/images/user1.png</img>
+		<dept>Etamology</dept>
+		<title></title>
+		<phonenum></phonenum>
+		<pagernum></pagernum>
+	</user>
+	
+	<user id="19">
+		<name>James Tang</name>
+		<img>dummydata/images/user1.png</img>
+		<dept>Cardiology</dept>
+		<title></title>
+		<phonenum></phonenum>
+		<pagernum></pagernum>
+	</user>
+	
+	<user id="20">
+		<name>William Smith</name>
+		<img>dummydata/images/user1.png</img>
+		<dept>Endocrinology</dept>
+		<title></title>
+		<phonenum></phonenum>
+		<pagernum></pagernum>
+	</user>
+	
+	<user id="21">
+		<name>Andrea Andrews</name>
+		<img>dummydata/images/user1.png</img>
+		<dept>Gastroentirology</dept>
+		<title></title>
+		<phonenum></phonenum>
+		<pagernum></pagernum>
+	</user>
+	
+	<user id="22">
+		<name>Fransis Grant</name>
+		<img>dummydata/images/user1.png</img>
+		<dept>Genetics</dept>
+		<title></title>
+		<phonenum></phonenum>
+		<pagernum></pagernum>
+	</user>
+</users>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		xmlns:s="library://ns.adobe.com/flex/spark"
+		backgroundColor="#133783"
+		creationComplete="view1_creationCompleteHandler(event)">
+	
+	<fx:Script>
+		<![CDATA[
+			import mx.events.FlexEvent;
+			protected function login_clickHandler(event:MouseEvent):void
+			{
+				/* if(username.text=="demo"&&password.text=="demo"){
+					navigator.pushView(views.ShowMessagesView);
+				} */
+				navigator.pushView(views.MessageHistoryView);
+			}
+			
+			protected function view1_creationCompleteHandler(event:FlexEvent):void
+			{
+				this.actionBarVisible=false;
+				
+			}
+			
+		]]>
+	</fx:Script>
+	
+	
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<s:layout>
+		<s:VerticalLayout horizontalAlign="center" paddingBottom="20" paddingLeft="20" paddingRight="20" paddingTop="50"/>
+	</s:layout>
+	<s:VGroup horizontalAlign="center">
+		<s:Image source="assets/images/logo.png"/>
+		<s:BorderContainer backgroundColor="#F5F5F5" width="80%" height="50" borderVisible="false" cornerRadius="10">
+			<s:layout>
+				<s:HorizontalLayout paddingBottom="10" paddingLeft="10" paddingRight="10" paddingTop="10"/>
+			</s:layout>
+			<s:Image source="assets/images/user.png"/>
+			<s:TextInput id="username" width="80%" borderVisible="false" contentBackgroundColor="#F5F5F5"/>
+		</s:BorderContainer>
+		<s:BorderContainer backgroundColor="#F5F5F5" width="80%" height="50" borderVisible="false" cornerRadius="10">
+			<s:layout>
+				<s:HorizontalLayout paddingBottom="10" paddingLeft="10" paddingRight="10" paddingTop="10"/>
+			</s:layout>
+			<s:Image source="assets/images/password.png"/>
+			<s:TextInput id="password" width="80%" borderVisible="false" contentBackgroundColor="#F5F5F5" displayAsPassword="true"/>
+		</s:BorderContainer>
+		<s:Button label="Sign In" width="80%" click="login_clickHandler(event)"/>
+	</s:VGroup>
+</s:View>

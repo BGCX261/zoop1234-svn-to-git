@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		xmlns:s="library://ns.adobe.com/flex/spark" title="Directory"
+		creationComplete="view1_creationCompleteHandler(event)">
+	<fx:Script>
+		<![CDATA[
+			import mx.collections.ArrayCollection;
+			import mx.collections.IList;
+			import mx.events.FlexEvent;
+			import mx.rpc.events.FaultEvent;
+			import mx.rpc.events.ResultEvent;
+			import mx.rpc.xml.SimpleXMLDecoder;
+			import mx.utils.ArrayUtil;
+			
+			
+			protected function dataService_resultHandler(event:ResultEvent):void
+			{
+				var xmlList:XMLList = XML(event.result).user;
+				xmlListColl = new XMLListCollection(xmlList);
+				messageList.dataProvider = xmlListColl as IList;
+			}
+			
+			protected function dataService_faultHandler(event:FaultEvent):void
+			{
+				trace(event.fault);
+			}
+			
+			protected function view1_creationCompleteHandler(event:FlexEvent):void
+			{
+				dataService.send();
+				this.addEventListener("sendNewMessageEvent", onSendNewMessageSelection);
+			}
+			protected function onSendNewMessageSelection(event:Event):void
+			{
+				navigator.pushView(views.NewMessageView);
+			}
+			
+			
+			
+			protected function deptNav_clickHandler(event:MouseEvent):void
+			{
+				navigator.pushView(views.DepartmentsView);
+			}
+			
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+		<s:XMLListCollection id="xmlListColl" />
+		<s:HTTPService id="dataService" resultFormat="e4x" url="dummydata/messagehistory.xml" result="dataService_resultHandler(event)" fault="dataService_faultHandler(event)"/>
+	</fx:Declarations>
+	<s:layout>
+		<s:VerticalLayout/>
+	</s:layout>
+	
+	<s:navigationContent>
+		<s:Button id="deptNav" label="Depts" click="deptNav_clickHandler(event)"/>
+	</s:navigationContent>	
+	<s:List id="messageList" width="100%" height="100%"  itemRenderer="assets.itemRenderers.DepartmentPersonsRenderer"/>
+</s:View>

@@ -1,0 +1,43 @@
+/* CSS file */
+@namespace s "library://ns.adobe.com/flex/spark";
+
+
+global
+{
+	focus-color: #F5F5F5;
+}
+s|ActionBar{
+	chromeColor: #2989d8;
+	skinClass:ClassReference("assets.skins.CustomActionBar");
+	titleAlign: center;
+	defaultButtonAppearance: beveled;
+}
+.smallButton{
+	chromeColor: #055bb0;
+}
+.messageTitle{
+	fontSize: 15px;
+	fontWeight: bold;
+	color: #000;
+}
+.messageDept{
+	fontSize: 13px;
+	fontWeight: normal;
+	color: #e0e0e0;
+}
+.sendButton{
+	chromeColor: #055bb0;
+	borderVisible: flase;
+	dropShadowVisible: true;
+	color: #ffffff;
+	cornerRadius: 5;
+	
+}
+.deleteButton{
+	chromeColor: #bc1010;
+	borderVisible: flase;
+	dropShadowVisible: true;
+	color: #ffffff;
+	cornerRadius: 5;
+}
+	

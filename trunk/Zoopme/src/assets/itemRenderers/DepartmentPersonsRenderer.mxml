@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		xmlns:s="library://ns.adobe.com/flex/spark"
+		creationComplete="view1_creationCompleteHandler(event)" xmlns:mx="library://ns.adobe.com/flex/mx">
+	<fx:Declarations>
+		
+	</fx:Declarations>
+	<fx:Script>
+		<![CDATA[
+			import mx.binding.utils.ChangeWatcher;
+			import mx.events.FlexEvent;
+			
+			
+			protected function view1_creationCompleteHandler(event:FlexEvent):void
+			{
+				if(data!=null){
+					var f:File = File.applicationDirectory.resolvePath(data.img);
+					f = new File(f.nativePath);
+					imgSrc.source = f.url;
+				}				
+			}
+			
+			protected function hgroup1_clickHandler(event:MouseEvent):void
+			{
+				dispatchEvent(new Event("sendNewMessageEvent", true));
+			}
+			
+		]]>
+	</fx:Script>
+	<s:HGroup paddingBottom="5" paddingLeft="5" paddingRight="5" paddingTop="5" width="100%"
+			  click="hgroup1_clickHandler(event)">
+		<s:Image id="imgSrc"/>
+		<s:VGroup>
+			<s:Label text="{data.name}" styleName="messageTitle"/>
+			<s:Label text="{data.dept}" styleName="messageDept"/>
+		</s:VGroup>
+		<s:Spacer width="100%"/>
+		<s:VGroup horizontalAlign="right" verticalAlign="middle" height="100%">			
+			<s:Image source="assets/images/next.png"/>
+		</s:VGroup>
+	</s:HGroup>
+	<s:Line width="100%">
+		<s:stroke>
+			<s:SolidColorStroke color="#E0e0e0"
+								weight="2"/>
+		</s:stroke>
+	</s:Line>
+	
+</s:View>
